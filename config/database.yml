@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: localhost
+  username: postgres
+  password: postgresa
+
+development:
+  <<: *default
+  database: maas_api_development
+
+test:
+  <<: *default
+  database: maas_api_test
+
+production:
+  <<: *default
+  database: maas_api_production
