@@ -1,3 +1,8 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  namespace :v1 do
+    get '/clients', to: 'clients#show'
+    resources :schedules, only: %i[show create update]
+  end
 end
