@@ -3,6 +3,8 @@
 class Client < ApplicationRecord
   has_many :schedules
 
+  validates :name, :requested_hours, presence: { message: + '%{attribute} no puede estar en blanco' }
+
   def self.available_schedules
     all.map do |client|
       {

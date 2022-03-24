@@ -3,6 +3,8 @@
 class Schedule < ApplicationRecord
   belongs_to :client
 
+  validates :name, :week, presence: { message: + '%{attribute} no puede estar en blanco' }
+
   def self.data(client, week)
     schedule = Schedule.joins(:client).find_by(clients: { name: client }, name: week)
     return {} unless schedule.present?
