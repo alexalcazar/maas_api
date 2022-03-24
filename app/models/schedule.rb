@@ -1,16 +1,18 @@
+# frozen_string_literal: true
+
 class Schedule < ApplicationRecord
   belongs_to :client
 
   def self.data(client, week)
     schedule = Schedule.joins(:client).find_by(clients: { name: client }, name: week)
     return {} unless schedule.present?
+
     return {} unless schedule.week.present?
 
     optimal_schedule = schedule.best_schedule_algorithm
     {
-      id: schedule.id,
-      week: optimal_schedule,
-      information: schedule.total_hours_asigned_by_employee(optimal_schedule),
+      id: schedule.id, week: optimal_schedule,
+      information: schedule.total_hours_asigned_by_employee(optimal_schedule)
     }
   end
 

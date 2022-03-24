@@ -1,0 +1,52 @@
+AllCops:
+  NewCops: enable
+  Exclude:
+    - node_modules/**/*
+    - vendor/**/*
+    - db/schema.rb
+Metrics/BlockLength:
+  Exclude:
+    - config/**/*
+    - spec/**/*
+    - db/**/*
+    - Guardfile
+Metrics/MethodLength:
+  Exclude:
+    - db/**/*
+    - bin/**/*
+Metrics/AbcSize:
+  Exclude:
+    - db/**/*
+Layout/LineLength:
+  Exclude:
+    - db/schema.rb
+    - bin/**/*
+    - config/initializers/**/*
+Metrics/PerceivedComplexity: 
+  Exclude:
+    - bin/**/*
+Style/Documentation:
+  Exclude:
+    - db/**/*
+    - config/**/*
+    - app/models/**/*
+    - app/controllers/**/*
+    - app/reflexes/**/*
+    - app/helpers/**/*
+    - app/serializers/**/*
+    - app/sidekiq/**/*
+Metrics/CyclomaticComplexity:
+  Exclude:
+    - bin/**/*
+Naming/FileName:
+  Exclude:
+    - config/initializers/rswag-ui.rb
+Style/MixinUsage:
+  Exclude:
+    - bin/**/*
+Style/ExpandPathArguments:
+  Exclude:
+    - bin/**/*
+Style/FrozenStringLiteralComment:
+  Exclude:
+    - bin/**/*

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 puts 'Adding users...'
 %w[Ernesto Benjamin Barbara].each do |user|
   puts user
