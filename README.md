@@ -22,6 +22,11 @@ Then just run the next command to leave the app up
 rails s
 ```
 
+Also, you can run the test with the rspec command
+```termianl
+rspec
+```
+
 ## Usage
 The [postman collection](https://www.getpostman.com/collections/575e44aa2072e68a5591) gives you examples to start working with.
 
