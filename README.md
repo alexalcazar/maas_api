@@ -23,7 +23,7 @@ rails s
 ```
 
 ## Usage
-The (postman collection)[https://www.getpostman.com/collections/575e44aa2072e68a5591] gives you examples to start working with.
+The [postman collection](https://www.getpostman.com/collections/575e44aa2072e68a5591) gives you examples to start working with.
 
 The availables end-points are:
 - GET: (maas_api_url)/v1/clients/available_schedules
