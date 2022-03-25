@@ -47,5 +47,9 @@ Starts the loop of the object Schedule.week:
   - Otherwise, if the _available_ids_to_select_ is present
     - The selected user or users are searched among the available users, and it is sent to the function _search_user_with_selected_flag_
 - The _search_user_with_selected_flag_ function is responsible for searching for the user with the selected flag, and validates
+
   - If the user is found, the selected flag is maintained, and 1 is subtracted from his counter of available hours
   - Otherwise, the user with the most available hours is returned and their selected flag is marked
+
+The diagram of the database are:
+<img width="826" alt="Captura de Pantalla 2022-03-25 a la(s) 9 05 06 a m" src="https://user-images.githubusercontent.com/87882793/160147122-d6f764e2-c7fe-42ad-bce9-782ac793829a.png">
