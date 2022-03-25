@@ -14,7 +14,11 @@ module V1
 
     def create
       schedule = Schedule.data(create_schedule_params[:client], create_schedule_params[:week])
-      render json: { data: schedule }, status: :ok
+      if schedule.present?
+        render json: { data: schedule }, status: :ok
+      else
+        render json: { data: {} }, status: :bad_request
+      end
     end
 
     def update
